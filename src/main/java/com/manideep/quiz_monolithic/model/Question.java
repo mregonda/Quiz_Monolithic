@@ -1,4 +1,4 @@
-package com.manideep.quiz_monolithic;
+package com.manideep.quiz_monolithic.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

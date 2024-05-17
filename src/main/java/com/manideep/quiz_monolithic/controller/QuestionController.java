@@ -1,10 +1,9 @@
 package com.manideep.quiz_monolithic.controller;
 
-import com.manideep.quiz_monolithic.Question;
+import com.manideep.quiz_monolithic.model.Question;
 import com.manideep.quiz_monolithic.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

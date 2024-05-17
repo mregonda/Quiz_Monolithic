@@ -1,7 +1,6 @@
 package com.manideep.quiz_monolithic.service;
 
-import ch.qos.logback.core.encoder.EchoEncoder;
-import com.manideep.quiz_monolithic.Question;
+import com.manideep.quiz_monolithic.model.Question;
 import com.manideep.quiz_monolithic.dao.QuestionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
