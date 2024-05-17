@@ -2,9 +2,11 @@ package com.manideep.quiz_monolithic.controller;
 
 import com.manideep.quiz_monolithic.model.Question;
 import com.manideep.quiz_monolithic.model.QuestionWrapper;
+import com.manideep.quiz_monolithic.model.Response;
 import com.manideep.quiz_monolithic.service.QuestionService;
 import com.manideep.quiz_monolithic.service.QuizService;
-import org.apache.coyote.Response;
+import jakarta.persistence.criteria.CriteriaBuilder;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,5 +28,9 @@ public class QuizController {
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable Integer id){
         return quizService.getQuizQuestions(id);
 
+    }
+    @PostMapping("submit/{id}")
+    public ResponseEntity<Integer> submitQuiz(@PathVariable Integer id, @RequestBody List<Response> responses){
+        return quizService.calculate(id,responses);
     }
 }
